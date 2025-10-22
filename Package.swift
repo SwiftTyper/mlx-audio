@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "Swift-TTS",
+    name: "SwiftTTS",
     platforms: [.macOS(.v14), .iOS(.v16)],
     products: [
         .library(
             name: "mlx-swift-audio",
-            targets: ["Swift-TTS","ESpeakNG"]),
+            targets: ["SwiftTTS","ESpeakNG"]),
 
     ],
     dependencies: [
@@ -21,7 +21,7 @@ let package = Package(
             path: "mlx_audio_swift/tts/Swift-TTS/Kokoro/Frameworks/ESpeakNG.xcframework"
         ),
         .target(
-            name: "Swift-TTS",
+            name: "SwiftTTS",
             dependencies: [
       .product(name: "MLX", package: "mlx-swift"),
                     .product(name: "MLXNN", package: "mlx-swift"),
